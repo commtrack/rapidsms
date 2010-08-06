@@ -60,6 +60,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.csrf.middleware.CsrfMiddleware',
 ]
 
 ROOT_URLCONF = "rapidsms.webui.urls"
@@ -190,6 +191,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'django.contrib.gis',
     'django.contrib.admindocs',
     'django.contrib.markup'
 ] + [app["module"] for app in RAPIDSMS_APPS.values()]
